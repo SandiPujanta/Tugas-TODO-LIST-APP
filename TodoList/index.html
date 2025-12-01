@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>To Do List App</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <h1 class="nav-title">TO DO LIST APP</h1>
+</nav>
+
+<div class="parent">
+    <div class="left-column">
+
+        <!-- TODO BOX -->
+        <div class="box todo-box div1">
+            <h2>TO DO LIST</h2>
+            <div class="input-row">
+                <input type="text" id="list" placeholder="Tambahkan tugas...">
+                <button id="bot">TAMBAH</button>
+            </div>
+            <div class="deadline-wrapper">
+                <label for="deadlineInput">Deadline :</label>
+                <input type="date" id="deadlineInput">
+            </div>
+        </div>
+
+        <!-- LIST BOX -->
+        <div class="box list-box div2">
+            <h2>DAFTAR LIST</h2>
+            <ul id="ul"></ul>
+        </div>
+    </div>
+    
+    <div class="left-column"> 
+        <!-- CALENDAR BOX -->
+        <div class="box calendar-box div3">
+            <h2>KALENDER DEADLINE</h2>
+            <div class="calendar-header">
+                <button id="prevMonth">◀</button>
+                <div id="monthYear"></div>
+                <button id="nextMonth">▶</button>
+            </div>
+            <div id="calendar-grid"></div>
+            <ul id="calendarTasks"></ul>
+        </div>
+        
+        <!-- HISTORY BOX -->
+        <div class="box history-box div4">
+            <h2>RIWAYAT</h2>
+            <div class="history-stats">
+                <div class="history-row">
+                    <span>
+                        <span class="history-icon">📌</span> 
+                        Task selesai
+                    </span>
+                    <span class="history-value" id="done">0</span>
+                </div>
+                
+                <div class="history-row">
+                    <span>
+                        <span class="history-icon">⏳</span> 
+                        Task belum selesai
+                    </span>
+                    <span class="history-value" id="undone">0</span>
+                </div>
+            </div>
+            <ul id="history"></ul>
+        </div>
+        
+        <div id="toast"></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
